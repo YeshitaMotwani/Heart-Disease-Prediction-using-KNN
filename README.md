@@ -1,4 +1,3 @@
-%%markdown
 # Heart Disease Prediction Project
 
 ## Project Overview
@@ -7,7 +6,7 @@ This project aims to build a machine learning model to predict the presence of h
 
 The dataset used for this project is named `heart.csv`. It contains a collection of health-related attributes for individuals, including age, sex, chest pain type, resting blood pressure, cholesterol levels, fasting blood sugar, resting electrocardiogram results, maximum heart rate achieved, exercise-induced angina, oldpeak (ST depression), and the slope of the peak exercise ST segment. The dataset also includes the target variable, 'HeartDisease', which indicates whether the individual has heart disease (1) or not (0).
 
-%%markdown
+
 ## Exploratory Data Analysis (EDA)
 
 Exploratory Data Analysis was conducted to understand the structure, content, and basic statistics of the dataset, and to identify potential issues like missing values, duplicates, and outliers.
@@ -19,7 +18,7 @@ Exploratory Data Analysis was conducted to understand the structure, content, an
 5.  **Relationship between Numerical Features and Heart Disease:** Box plots and violin plots were used to visualize the relationship between 'HeartDisease' and continuous variables like 'Cholesterol' and 'Age', helping to understand if there are significant differences in these attributes between individuals with and without heart disease.
 6.  **Correlation Analysis:** A heatmap of the correlation matrix for numerical features was generated using `df.corr(numeric_only=True)` and `seaborn.heatmap` to visualize the linear relationships between these variables.
 
-%%markdown
+
 ## Data Preprocessing and Cleaning
 
 Before training machine learning models, the data underwent several preprocessing and cleaning steps to handle categorical variables and prepare the features for modeling.
@@ -30,7 +29,7 @@ Before training machine learning models, the data underwent several preprocessin
 4.  **Data Splitting:** The `X` and `y` data were split into training and testing sets using `train_test_split` from `sklearn.model_selection`. A `test_size` of 0.2 (20% of the data) was allocated for the test set, and `stratify=y` was used to ensure that the proportion of the target variable ('HeartDisease') is the same in both the training and testing sets as in the original dataset. This is particularly important for imbalanced datasets. A `random_state` was set for reproducibility.
 5.  **Feature Scaling:** Numerical features (`X_train` and `X_test`) were scaled using `StandardScaler` from `sklearn.preprocessing`. This process standardizes the features by removing the mean and scaling to unit variance. The scaler was fitted *only* on the training data (`X_train_scaled = scaler.fit_transform(X_train)`) to learn the scaling parameters (mean and standard deviation) from the training distribution. This fitted scaler was then used to transform both the training and testing data (`X_test_scaled = scaler.transform(X_test)`). This ensures that the test data is scaled based on the training data's characteristics, preventing data leakage from the test set into the training process.
 
-%%markdown
+
 ## Modeling and Evaluation
 
 Several machine learning models were trained and evaluated to predict heart disease.
@@ -53,7 +52,7 @@ Several machine learning models were trained and evaluated to predict heart dise
 The accuracy and F1 Score for each model were calculated and stored in the `results` list.
 
 
-%%markdown
+
 ## Results
 
 The trained models were evaluated based on their Accuracy and F1 Score on the test dataset. The performance of each model is summarized below:
@@ -69,12 +68,10 @@ display(pd.DataFrame(results))
 
 
 
-%%markdown
-
 From the results, the K-Nearest Neighbors (KNN) model achieved the highest Accuracy (0.8859) and F1 Score (0.8986), indicating it is the best-performing model among those tested for this dataset and problem. Logistic Regression and Naive Bayes also showed strong performance, while the Decision Tree had the lowest performance metrics. The SVM with RBF kernel performed comparably to Logistic Regression and Naive Bayes.
 
 
-%%markdown
+
 ## How to Use the Saved Model
 
 To use the saved model for making predictions on new data, you will need the saved model file (`KNN_heart.pkl`), the fitted scaler object (`scaler.pkl`), and the list of original column names (`columns.pkl`).
@@ -107,4 +104,3 @@ To use the saved model for making predictions on new data, you will need the sav
 
 5.  **Interpret Predictions:** The `predictions` array will contain the predicted class for each instance in your new data. A value of `0` indicates the model predicts no heart disease, and `1` indicates the model predicts heart disease.
 
-6.  
