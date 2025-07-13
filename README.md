@@ -1,5 +1,7 @@
 # Heart Disease Prediction Project
 
+URL: https://heart-disease-knn-predictor.streamlit.app/
+
 ## Project Overview
 
 This project aims to build a machine learning model to predict the presence of heart disease based on various health indicators. The goal is to develop an accurate and reliable model that can assist in the early identification of individuals at risk of heart disease.
