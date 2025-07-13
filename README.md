@@ -59,13 +59,8 @@ The trained models were evaluated based on their Accuracy and F1 Score on the te
 
 
 display(pd.DataFrame(results))
-	Model	 Accuracy	 F1 Score
-0	Logistic Regression	0.8750	0.8878
-1	KNN	0.8859	0.8986
-2	Naive Bayes	0.8696	0.8788
-3	Decision Tree	0.7500	0.7604
-4	SVM (RBF Kernel)	0.8641	0.8804
 
+[{"index":0,"Model":"Logistic Regression","Accuracy":0.875,"F1 Score":0.8878},{"index":1,"Model":"KNN","Accuracy":0.8859,"F1 Score":0.8986},{"index":2,"Model":"Naive Bayes","Accuracy":0.8696,"F1 Score":0.8788},{"index":3,"Model":"Decision Tree","Accuracy":0.75,"F1 Score":0.7604},{"index":4,"Model":"SVM (RBF Kernel)","Accuracy":0.8641,"F1 Score":0.8804}]
 
 
 From the results, the K-Nearest Neighbors (KNN) model achieved the highest Accuracy (0.8859) and F1 Score (0.8986), indicating it is the best-performing model among those tested for this dataset and problem. Logistic Regression and Naive Bayes also showed strong performance, while the Decision Tree had the lowest performance metrics. The SVM with RBF kernel performed comparably to Logistic Regression and Naive Bayes.
